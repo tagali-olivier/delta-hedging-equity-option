@@ -2,7 +2,7 @@
 ==============================================================================
 1. CAS DE BASE — 5 trajectoires, couverture quotidienne, sans frais
 ==============================================================================
-Simulation + couverture de 5 × 21 jours : 1.0 ms (objectif < 1 s)
+Simulation + couverture de 5 × 21 jours : 1.5 ms
 Prime encaissée au jour 0 : 8.9160 € par option, soit 89,160 € au total
 Delta initial : 0.5793 -> achat de 5,793 actions
 
@@ -71,7 +71,7 @@ réalisée 20%           -31.26              1,002.70        -3,295.21         4
 réalisée 40%        -9,390.91              3,716.21       -12,508.31         3,900.07                99.70%
 
 ==============================================================================
-5. BONUS — rebalancement quotidien vs hebdomadaire, avec ou sans frais (0,1 %)
+5. FRAIS — rebalancement quotidien vs hebdomadaire, avec ou sans frais (0,1 %)
 ==============================================================================
                      pnl_total_moyen  pnl_total_ecart_type  frais_moyens efficacite_couverture
 rebalancement frais                                                                           

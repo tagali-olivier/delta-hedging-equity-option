@@ -13,13 +13,13 @@ TRADING_DAYS_PER_YEAR = 252
 
 @dataclass(frozen=True)
 class MarketParams:
-    """Données de marché (cf. section « Hypothèses et conventions »)."""
+    """Données de marché."""
 
     s0: float = 100.0              # prix initial de l'action
     r: float = 0.02                # taux sans risque, composé en continu
     sigma_implied: float = 0.20    # volatilité utilisée pour PRICER et couvrir
     sigma_realized: float = 0.20   # volatilité qui génère VRAIMENT les prix
-    q: float = 0.0                 # dividendes (aucun dans l'énoncé)
+    q: float = 0.0                 # rendement du dividende (aucun ici)
 
 
 @dataclass(frozen=True)
@@ -31,7 +31,7 @@ class OptionSpec:
     n_contracts: int = 100         # 100 contrats ...
     contract_size: int = 100       # ... de 100 actions = 10 000 actions notionnelles
     # Position de la banque sur l'option : -1 = vendeuse (le client a acheté),
-    # +1 = acheteuse. Par défaut, la banque est courte (cas de l'énoncé).
+    # +1 = acheteuse. Par défaut, la banque est courte (le client a acheté).
     position: int = -1
 
     @property

@@ -3,7 +3,7 @@ Génération de trajectoires de prix synthétiques (mouvement brownien géométr
 
     S_t = S_{t-1} · exp[(r - σ²/2)·Δt + σ·√Δt·Z_t],   Z_t ~ N(0, 1)
 
-On simule sous la probabilité risque-neutre (dérive = r), comme dans l'énoncé.
+On simule sous la probabilité risque-neutre (dérive = r).
 Pour une couverture delta, la dérive a d'ailleurs peu d'importance : c'est la
 volatilité réalisée qui fait le PnL.
 """

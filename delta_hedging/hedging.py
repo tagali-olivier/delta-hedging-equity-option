@@ -19,7 +19,7 @@ PnL du jour           : PnL_t = V_t - V_{t-1}
                              + intérêts sur le cash        (B_{t-1} · (e^{rΔt} - 1))
                              - frais de transaction
 
-C'est la formule de l'énoncé, écrite du point de vue de la banque vendeuse.
+Toutes les quantités sont vues du côté de la banque vendeuse.
 
 Toute la boucle est vectorisée sur les trajectoires : on traite 5 ou 5 000
 chemins en même temps, avec le même code.
@@ -72,7 +72,7 @@ class HedgeResult:
         return self.spot.shape[0]
 
     def to_dataframe(self, path: int = 0) -> pd.DataFrame:
-        """Tableau jour par jour pour une trajectoire donnée (livrable n°1 et n°2)."""
+        """Tableau jour par jour pour une trajectoire donnée."""
         df = pd.DataFrame(
             {
                 "jour": np.arange(self.spot.shape[1]),

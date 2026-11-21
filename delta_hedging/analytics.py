@@ -1,5 +1,5 @@
 """
-Indicateurs de performance de la couverture (livrable n°3).
+Indicateurs de performance de la couverture.
 
 Deux questions guident ces mesures :
   1. Combien a-t-on gagné ou perdu ?             -> PnL total et sa décomposition

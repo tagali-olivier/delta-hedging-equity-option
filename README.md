@@ -1,6 +1,6 @@
 # Couverture delta d'une option sur action — point de vue d'un trader flux
 
-Simulation en Python d'une stratégie de **couverture delta dynamique** d'un call européen vendu à un client, avec un suivi quotidien du PnL, de son attribution par les Grecs et des mesures de risque.
+Projet personnel : simulation en Python d'une stratégie de **couverture delta dynamique** d'un call européen vendu à un client, avec un suivi quotidien du PnL, de son attribution par les Grecs et des mesures de risque.
 
 ![Tableau de bord d'une trajectoire](figures/02_tableau_de_bord_trajectoire_0.png)
 
@@ -29,7 +29,7 @@ Pour neutraliser ce risque, le trader **achète des actions**. Combien ? Exactem
 
 Le problème : **le delta change tout le temps** (avec le prix, le temps, la volatilité). Il faut donc réajuster la couverture chaque jour. C'est ce qu'on simule ici sur un mois.
 
-> **Note sur l'énoncé.** L'énoncé écrit à un endroit « détenir −Δ actions pour chaque call vendu ». C'est l'inverse : un **vendeur** de call détient **+Δ** actions (il est acheteur d'actions). La formule de PnL de l'énoncé est écrite du point de vue d'un *acheteur* de call. Le code gère les deux cas avec le paramètre `position` (−1 = vendeur, cas par défaut ; +1 = acheteur).
+> **Attention au signe.** On lit parfois qu'il faut « détenir −Δ actions par call vendu ». C'est l'inverse : un **vendeur** de call se couvre en détenant **+Δ** actions, puisqu'il perd quand l'action monte. Le code gère les deux cas avec le paramètre `position` (−1 = vendeur, cas par défaut ; +1 = acheteur).
 
 ## 2. Hypothèses
 
@@ -43,7 +43,7 @@ Le problème : **le delta change tout le temps** (avec le prix, le temps, la vol
 | Taille | 100 contrats × 100 actions = **10 000 actions notionnelles** |
 | Horizon simulé | 21 jours de bourse (1 mois), Δt = 1/252 |
 | Modèle | Black-Scholes |
-| Frais | aucun (sauf dans le défi bonus : 0,1 % par transaction) |
+| Frais | aucun (sauf dans l'étude des frais : 0,1 % par transaction) |
 
 ## 3. La méthode
 
@@ -63,7 +63,7 @@ Au jour 0 : **C = 8,9160 €**, **Δ = 0,5793**, Γ = 0,0196, ν = 39,10. La ban
 
 ### 3.2 Simulation des prix
 
-Mouvement brownien géométrique, exactement comme dans l'énoncé :
+Mouvement brownien géométrique (le modèle standard des prix d'actions) :
 
 $$S_t = S_{t-1}\, \exp\!\left[\left(r - \tfrac{\sigma^2}{2}\right)\Delta t + \sigma\sqrt{\Delta t}\, Z_t\right], \qquad Z_t \sim \mathcal{N}(0,1)$$
 
@@ -83,7 +83,7 @@ PnL d'une journée (point de vue de la banque vendeuse) :
 
 $$\text{PnL}_t = \underbrace{-N\,(C_t - C_{t-1})}_{\text{option}} + \underbrace{h_{t-1}\,(S_t - S_{t-1})}_{\text{actions}} + \underbrace{B_{t-1}\,(e^{r\Delta t}-1)}_{\text{intérêts}} - \text{frais}_t$$
 
-avec $h_t = N\,\Delta_t$ le nombre d'actions détenues et $B_t$ le cash. Les intérêts sont composés en continu ($e^{r\Delta t}-1$) au lieu du $r\,\Delta t$ de l'énoncé : la différence est négligeable sur un jour.
+avec $h_t = N\,\Delta_t$ le nombre d'actions détenues et $B_t$ le cash. Les intérêts sont composés en continu ($e^{r\Delta t}-1$) plutôt qu'en $r\,\Delta t$ : la différence est négligeable sur un jour.
 
 ### 3.4 Attribution du PnL par les Grecs
 
@@ -113,7 +113,7 @@ delta-hedging-equity-option/
 
 Quelques choix :
 
-- **Tout est vectorisé avec numpy** : la même fonction traite 1 ou 5 000 trajectoires d'un coup. 5 trajectoires × 21 jours prennent environ **1 ms** (l'objectif était < 1 s).
+- **Tout est vectorisé avec numpy** : la même fonction traite 1 ou 5 000 trajectoires d'un coup. 5 trajectoires × 21 jours prennent environ **1 ms**.
 - **Volatilité implicite et réalisée séparées** : le trader price et couvre avec la vol implicite (celle qu'il connaît), alors que les prix sont simulés avec la vol réalisée. C'est ce qui permet d'étudier le vrai risque du métier.
 - **Cas limites** : le prix est plafonné par le bas à 0,01 € (pas de `log(0)`), et à l'échéance l'option vaut sa valeur intrinsèque max(S − K, 0).
 
@@ -187,7 +187,7 @@ La couverture divise le risque par **34**. En moyenne, le PnL couvert est proche
 
 ### 6.4 Robustesse : σ = 10 %, 20 %, 40 %
 
-D'abord le cas demandé par l'énoncé, où vol implicite et vol réalisée sont égales :
+D'abord le cas où vol implicite et vol réalisée sont égales :
 
 | σ | PnL moyen | Écart-type couvert | Écart-type sans couverture | Gamma moyen | Theta moyen | Efficacité |
 |---|---|---|---|---|---|---|
@@ -209,7 +209,7 @@ Mais le vrai danger est ailleurs : quand **la vol réalisée n'est pas celle qu'
 
 Le theta encaissé est presque le même dans les trois cas (il est fixé par la vol implicite de 20 %). C'est le **coût gamma** qui explose quand le marché s'agite : il est multiplié par 15 entre 10 % et 40 % de vol réalisée. La couverture delta protège contre la **direction** du marché, pas contre son **agitation**.
 
-### 6.5 Défi bonus : frais de transaction et fréquence de rebalancement
+### 6.5 Frais de transaction et fréquence de rebalancement
 
 ![Rebalancement et frais](figures/07_rebalancement_frais.png)
 
@@ -234,7 +234,7 @@ Le theta encaissé est presque le même dans les trois cas (il est fixé par la 
 4. **Le vrai pari est sur la volatilité** : un trader delta-neutre gagne si le marché bouge moins que la volatilité implicite qu'il a vendue, et perd s'il bouge plus. Le PnL du mois tient à peu près dans la formule $\tfrac{1}{2}\,\Gamma S^2 (\sigma_{\text{implicite}}^2 - \sigma_{\text{réalisée}}^2)\,dt$ sommée sur les jours.
 5. **Rebalancer a un coût** : plus souvent, c'est moins de risque mais plus de frais.
 
-**Pour un entretien**, la phrase à placer : *« Une position delta-neutre courte en options est courte gamma et longue theta : elle gagne si la volatilité réalisée est inférieure à la volatilité implicite, et c'est le coût gamma qui domine sur un marché agité. »*
+**En une phrase :** *« Une position delta-neutre courte en options est courte gamma et longue theta : elle gagne si la volatilité réalisée est inférieure à la volatilité implicite, et c'est le coût gamma qui domine sur un marché agité. »*
 
 ## 8. Limites et pistes d'amélioration
 

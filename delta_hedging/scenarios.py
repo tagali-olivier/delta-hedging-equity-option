@@ -35,7 +35,7 @@ def compare_volatility_levels(
     sigmas, market: MarketParams, option: OptionSpec, sim: SimulationParams, hedge: HedgeParams
 ) -> pd.DataFrame:
     """
-    Test de robustesse de l'énoncé : σ = 10 %, 20 %, 40 %.
+    Test de robustesse : σ = 10 %, 20 %, 40 %.
     Ici vol implicite = vol réalisée : le marché se comporte comme le modèle le prévoit.
     """
     rows = {}
@@ -63,7 +63,7 @@ def compare_rebalancing(
     frequencies: dict, costs, market: MarketParams, option: OptionSpec, sim: SimulationParams
 ) -> pd.DataFrame:
     """
-    Défi bonus : fréquence de rebalancement × frais de transaction.
+    Fréquence de rebalancement × frais de transaction.
     `frequencies` associe un libellé à un nombre de jours, ex. {"quotidien": 1, "hebdo": 5}.
     """
     rows = []
