@@ -1,0 +1,4 @@
+,nb_trajectoires,pnl_total_moyen,pnl_total_ecart_type,pnl_sans_couv_moyen,pnl_sans_couv_ecart_type,pnl_gamma_moyen,pnl_theta_moyen,frais_moyens,efficacite_couverture
+σ = 10%,2000.0000,-14.8098,495.6907,-228.7236,17496.3465,-1628.7491,2527.7719,0.0000,0.9992
+σ = 20%,2000.0000,-31.2623,1002.6958,-438.6579,33988.8402,-3295.2107,4079.6308,0.0000,0.9991
+σ = 40%,2000.0000,-64.3496,1984.6719,-893.5817,70669.1663,-6520.5111,7171.0130,0.0000,0.9992

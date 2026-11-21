@@ -1,0 +1,4 @@
+,nb_trajectoires,pnl_total_moyen,pnl_total_ecart_type,pnl_sans_couv_moyen,pnl_sans_couv_ecart_type,pnl_gamma_moyen,pnl_theta_moyen,frais_moyens,efficacite_couverture
+réalisée 10%,2000.0000,2480.2197,258.2997,2262.4189,16788.8671,-835.9293,4130.9784,0.0000,0.9998
+réalisée 20%,2000.0000,-31.2623,1002.6958,-438.6579,33988.8402,-3295.2107,4079.6308,0.0000,0.9991
+réalisée 40%,2000.0000,-9390.9067,3716.2095,-10112.6805,70479.5283,-12508.3084,3900.0686,0.0000,0.9970

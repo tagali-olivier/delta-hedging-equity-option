@@ -1,0 +1,5 @@
+rebalancement,frais,nb_trajectoires,pnl_total_moyen,pnl_total_ecart_type,pnl_sans_couv_moyen,pnl_sans_couv_ecart_type,pnl_gamma_moyen,pnl_theta_moyen,frais_moyens,efficacite_couverture
+quotidien,0.0%,2000,-31.2623,1002.6958,-438.6579,33988.8402,-3295.2107,4079.6308,0.0000,0.9991
+quotidien,0.1%,2000,-1006.2780,1061.7547,-438.6579,33988.8402,-3295.2107,4079.6308,-973.7201,0.9990
+hebdomadaire,0.0%,2000,-70.6573,2159.6540,-438.6579,33988.8402,-3295.2107,4079.6308,0.0000,0.9958
+hebdomadaire,0.1%,2000,-829.1351,2218.3344,-438.6579,33988.8402,-3295.2107,4079.6308,-757.3921,0.9957
