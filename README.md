@@ -2,7 +2,7 @@
 
 Projet personnel : simulation en Python d'une stratégie de **couverture delta dynamique** d'un call européen vendu à un client, avec un suivi quotidien du PnL, de son attribution par les Grecs et des mesures de risque.
 
-![Tableau de bord d'une trajectoire](figures/02_tableau_de_bord_trajectoire_0.png)
+ ![Tableau de bord d'une trajectoire](figures/02_tableau_de_bord_trajectoire_0.png)
 
 ---
 
