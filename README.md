@@ -8,7 +8,7 @@ Projet personnel : simulation en Python d'une stratégie de **couverture delta d
 
 ## Sommaire
 
-1. [Le contexte en deux minutes](#1-le-contexte-en-deux-minutes)
+1. [Le contexte ](#1-le-contexte)
 2. [Hypothèses](#2-hypothèses)
 3. [La méthode](#3-la-méthode)
 4. [Organisation du code](#4-organisation-du-code)
