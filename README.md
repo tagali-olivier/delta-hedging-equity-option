@@ -164,7 +164,7 @@ Toutes les sorties sont dans [`results/`](results/) (la sortie console complète
 
 ![Attribution du PnL](figures/03_attribution_pnl.png)
 
-Les intérêts sont négatifs car le trader emprunte pour acheter les actions (≈ 579 000 € d'actions contre 89 000 € de prime). Le résidu « inexpliqué » est quasi nul (−10 € sur la trajectoire 0) : l'attribution par les Grecs explique tout le PnL.
+Les intérêts sont négatifs car le trader emprunte pour acheter les actions (≈ 579 000 € d'actions contre 89 000 € de prime). Le résidu <<inexpliqué >> est quasi nul (−10 € sur la trajectoire 0) : l'attribution par les Grecs explique tout le PnL.
 
 ### 6.2 L'effet gamma, en une image
 
