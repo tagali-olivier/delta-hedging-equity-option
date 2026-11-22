@@ -131,10 +131,12 @@ def plot_pnl_vs_move(res: HedgeResult, path=None):
     ax = axes[1]
     ax.scatter(dS, hedged, s=10, color=BLUE, alpha=0.6, edgecolors="none", label="PnL couvert observé")
     grid = np.linspace(dS.min(), dS.max(), 200)
-    # Approximation théorique au jour 0 : PnL ≈ Θ·dt + intérêts + ½·Γ·dS² (position vendeuse)
+    # Approximation théorique au jour 0, pour la banque vendeuse de N calls :
+    #   PnL ≈ −N·Θ·dt + intérêts − ½·N·Γ·dS²   (Θ < 0 et Γ > 0 sont les Grecs d'UN call)
+    # net_gamma = −N·Γ et pnl_theta = −N·Θ·dt sont déjà exprimés pour la position.
     gamma0 = res.net_gamma[:, 0].mean()
     carry0 = (res.pnl_theta[:, 1] + res.pnl_interest[:, 1]).mean()
-    ax.plot(grid, carry0 + 0.5 * gamma0 * grid**2, color=INK, lw=1.5, label="Θ·dt + intérêts + ½·Γ·dS²")
+    ax.plot(grid, carry0 + 0.5 * gamma0 * grid**2, color=INK, lw=1.5, label="−N·Θ·dt + intérêts − ½·N·Γ·dS²")
     ax.axhline(0, color=GREY, lw=1)
     ax.set(title="Zoom sur le portefeuille couvert : l'effet gamma", xlabel="Variation journalière de S (€)")
     _euros(ax)

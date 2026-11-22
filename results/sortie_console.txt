@@ -2,7 +2,7 @@
 ==============================================================================
 1. CAS DE BASE — 5 trajectoires, couverture quotidienne, sans frais
 ==============================================================================
-Simulation + couverture de 5 × 21 jours : 1.5 ms
+Simulation + couverture de 5 × 21 jours : 3.5 ms
 Prime encaissée au jour 0 : 8.9160 € par option, soit 89,160 € au total
 Delta initial : 0.5793 -> achat de 5,793 actions
 

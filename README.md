@@ -170,7 +170,7 @@ Les intérêts sont négatifs car le trader emprunte pour acheter les actions (�
 
 ![PnL vs mouvement](figures/05_pnl_vs_mouvement.png)
 
-À gauche, l'option seule : une droite, on perd quand l'action monte. À droite, le portefeuille couvert : une **parabole retournée**. Les petits mouvements rapportent un peu (le theta, ≈ +156 € par jour net des intérêts), les grands mouvements coûtent cher, **dans les deux sens**. C'est la signature d'une position **gamma négatif**. La courbe noire est la formule théorique Θ·dt + ½·Γ·dS² : elle colle aux points simulés.
+À gauche, l'option seule : une droite, on perd quand l'action monte. À droite, le portefeuille couvert : une **parabole retournée**. Les petits mouvements rapportent un peu (le theta, ≈ +156 € par jour net des intérêts), les grands mouvements coûtent cher, **dans les deux sens**. C'est la signature d'une position **gamma négatif**. La courbe noire est la formule théorique −N·Θ·dt + intérêts − ½·N·Γ·dS² (N = 10 000, Θ et Γ étant les Grecs d'un call) : elle colle aux points simulés.
 
 ### 6.3 Monte-Carlo : 2 000 trajectoires
 
