@@ -97,7 +97,7 @@ C'est l'idée centrale du projet: un vendeur d'option couvert **gagne le theta**
 delta-hedging-equity-option/
 ├── main.py                     # lance toutes les analyses, écrit results/ et figures/
 ├── delta_hedging/
-│   ├── config.py               # tous les paramètres (dataclasses)
+│   ├── config.py               # tous les paramètres (dataclasses) 
 │   ├── black_scholes.py        # prix + Grecs, cas limites S -> 0 et T -> 0
 │   ├── simulation.py           # trajectoires de prix (GBM)
 │   ├── hedging.py              # boucle de couverture + décomposition du PnL
