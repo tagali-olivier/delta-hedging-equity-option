@@ -240,4 +240,7 @@ Le theta encaissé est presque le même dans les trois cas (il est fixé par la 
 - **Pas de sauts** : le GBM ne produit pas de krachs. Un modèle à sauts (Merton) montrerait des pertes gamma bien plus brutales.
 - **Couverture gamma** : on pourrait neutraliser aussi le gamma en achetant une autre option, puis couvrir le delta résiduel avec l'action.
 - **Règles de rebalancement plus fines** : seuil sur le delta net, bandes de Whalley-Wilmott.
-- **Données réelles** : rejouer la stratégie sur l'historique d'Apple ou du S&P 500.
+
+  **Seuil sur le delta net : on n’ajuste la couverture que lorsque l'écart entre les actions détenues et les actions nécessaires dépasse un niveau fixé à      l'avance, pour éviter de payer des frais sur de petites transactions inutiles.
+
+   **Bandes de Whalley-Wilmott : on laisse la couverture s'écarter librement à l'intérieur d'une bande autour du delta idéal. La largeur de cette bande augmente avec les frais et diminue avec le gamma. Quand on en sort, on ajuste seulement jusqu’au bord de la bande.
