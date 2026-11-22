@@ -40,7 +40,7 @@ def bs_greeks(S, K, r, T, sigma, s_floor: float = 0.01) -> Greeks:
     Calcule le prix et les Grecs d'un call européen.
 
     Cas limites gérés :
-      * S -> 0 : le prix de l'action est plafonné par le bas à `s_floor`
+      * S -> 0 : le prix de l'action ne descend pas sous le plancher `s_floor`
         (évite log(0) = -inf) ;
       * T -> 0 : à l'échéance, l'option vaut sa valeur intrinsèque max(S-K, 0),
         son delta vaut 1 si S > K et 0 sinon, gamma, vega et theta sont nuls.

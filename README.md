@@ -113,7 +113,7 @@ Quelques choix :
 
 - **Tout est vectorisé avec numpy** : la même fonction traite 1 ou 5 000 trajectoires d'un coup. 5 trajectoires × 21 jours prennent environ **1 ms**.
 - **Volatilité implicite et réalisée séparées** : le trader price et couvre avec la vol implicite (celle qu'il connaît), alors que les prix sont simulés avec la vol réalisée. C'est ce qui permet d'étudier le vrai risque du métier.
-- **Cas limites** : le prix est plafonné par le bas à 0,01 € (pas de `log(0)`), et à l'échéance l'option vaut sa valeur intrinsèque max(S − K, 0).
+- **Cas limites** : le prix de l'action ne peut pas descendre sous un plancher de 0,01 €, pour éviter de calculer `log(0)`. Le jour de l'échéance, l'option vaut sa valeur intrinsèque, max(S − K, 0).
 
 Les tests vérifient entre autres : le prix de référence, la parité call-put, les Grecs contre des différences finies, les cas limites, que la décomposition du PnL tombe juste au centime près, et que la couverture réduit bien le risque.
 

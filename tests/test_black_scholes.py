@@ -45,7 +45,7 @@ def test_echeance_valeur_intrinseque():
 
 
 def test_prix_action_proche_de_zero():
-    g = bs_greeks(0.0, K, R, T, SIGMA)  # plafonné à 0,01 : pas de NaN ni d'infini
+    g = bs_greeks(0.0, K, R, T, SIGMA)  # plancher à 0,01 : pas de NaN ni d'infini
     assert np.isfinite([g.price, g.delta, g.gamma, g.vega, g.theta]).all()
     assert g.price == pytest.approx(0.0, abs=1e-12)
     assert g.delta == pytest.approx(0.0, abs=1e-12)
