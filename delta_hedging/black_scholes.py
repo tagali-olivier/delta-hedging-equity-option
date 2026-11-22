@@ -1,5 +1,5 @@
 """
-Prix et sensibilités (« Grecs ») d'un call européen dans le modèle de Black-Scholes.
+Prix et sensibilités (<< Grecs >>) d'un call européen dans le modèle de Black-Scholes.
 
 Toutes les fonctions acceptent des scalaires OU des tableaux numpy : on peut
 donc pricer en un seul appel l'option sur des centaines de trajectoires à la fois.
