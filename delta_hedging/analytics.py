@@ -1,7 +1,7 @@
 """
 Indicateurs de performance de la couverture.
 
-Deux questions guident ces mesures :
+Deux questions guident ces mesures:
   1. Combien a-t-on gagné ou perdu ?             -> PnL total et sa décomposition
   2. La couverture a-t-elle réduit le risque ?   -> efficacité de la couverture
 """
