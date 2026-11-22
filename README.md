@@ -87,7 +87,7 @@ avec $h_t = N\,\Delta_t$ le nombre d'actions détenues et $B_t$ le cash. Les int
 
 Pour comprendre **d'où vient** le PnL, on le décompose avec un développement de Taylor :
 
-$$\text{PnL}_t \approx \underbrace{\Delta_{\text{net}}\, dS}_{\approx 0 \text{ si couvert}} + \underbrace{-\tfrac{1}{2} N\,\Gamma\, dS^2}_{\text{coût gamma}} + \underbrace{-N\,\Theta\, dt}_{\text{gain theta}} + \text{intérêts} - \text{frais} + \text{résidu}$$
+$$\text{PnL}_t \approx \underbrace{\Delta_{\text{net}}\, dS}_{\approx 0 \text{ si couvert}} -\underbrace{\tfrac{1}{2} N\,\Gamma\, dS^2}_{\text{coût gamma}} -\underbrace{N\,\Theta\, dt}_{\text{gain theta}} + \text{intérêts} - \text{frais} + \text{résidu}$$
 
 C'est l'idée centrale du projet : un vendeur d'option couvert **gagne le theta** chaque jour (le temps qui passe fait baisser la valeur de ce qu'il doit) mais **paie le gamma** à chaque mouvement de l'action, petit ou grand. Les deux s'équilibrent exactement quand la volatilité réalisée est égale à la volatilité implicite.
 
