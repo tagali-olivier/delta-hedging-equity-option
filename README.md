@@ -1,4 +1,4 @@
-# Couverture delta d'une option sur action — point de vue d'un trader flux
+# Couverture delta d'une option sur action - point de vue d'un trader flux
 
 Projet personnel : simulation en Python d'une stratégie de **couverture delta dynamique** d'un call européen vendu à un client, avec un suivi quotidien du PnL, de son attribution par les Grecs et des mesures de risque.
 
