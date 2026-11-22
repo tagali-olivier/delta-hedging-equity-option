@@ -53,7 +53,7 @@ $$d_1 = \frac{\ln(S/K) + (r + \sigma^2/2)\,T}{\sigma\sqrt{T}}, \qquad d_2 = d_1 
 
 | Grandeur | Formule | Ce qu'elle mesure |
 |---|---|---|
-| Prix | $C = S\,N(d_1) - K e^{-rT} N(d_2)$ | valeur de l'option |
+| Prix | $C = S\time N(d_1) - K e^{-rT} N(d_2)$ | valeur de l'option |
 | Delta | $\Delta = N(d_1)$ | sensibilité au prix de l'action |
 | Gamma | $\Gamma = \dfrac{n(d_1)}{S\sigma\sqrt{T}}$ | vitesse à laquelle le delta change |
 | Vega | $\nu = S\sqrt{T}\,n(d_1)$ | sensibilité à la volatilité |
