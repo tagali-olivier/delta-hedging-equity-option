@@ -162,7 +162,7 @@ Toutes les sorties sont dans [`results/`](results/) (la sortie console complète
 - **Avec couverture**, le PnL reste entre +900 € et +2 000 € quelle que soit la direction. L'efficacité de la couverture est de **99,9 %** : elle élimine 99,9 % de la variance du PnL quotidien.
 - Les cinq PnL sont positifs, et ce n'est pas un hasard: avec cette graine, les cinq trajectoires ont une **vol réalisée inférieure à 20 %**. Le trader a vendu de la volatilité à 20 % et le marché n'a bougé qu'à 13–17 %, donc le gain theta dépasse le coût gamma. Plus la vol réalisée est basse, plus le PnL est élevé (trajectoire 3 : 13 % → +1 954 €).
 
-![Attribution du PnL](figures/03_attribution_pnl.png)
+[Attribution du PnL](figures/03_attribution_pnl.png)
 
 Les intérêts sont négatifs car le trader emprunte pour acheter les actions (≈ 579 000 € d'actions contre 89 000 € de prime). Le résidu « inexpliqué » est quasi nul (−10 € sur la trajectoire 0) : l'attribution par les Grecs explique tout le PnL.
 
