@@ -65,7 +65,7 @@ Au jour 0 : **C = 8,9160 €**, **Δ = 0,5793**, Γ = 0,0196, ν = 39,10. La ban
 
 Mouvement brownien géométrique (le modèle standard des prix d'actions) :
 
-$$S_t = S_{t-1}\, \exp\!\left[\left(r - \tfrac{\sigma^2}{2}\right)\Delta t + \sigma\sqrt{\Delta t}\, Z_t\right], \qquad Z_t \sim \mathcal{N}(0,1)$$
+$$S_t = S_{t-1}\, \exp\left[\left(r - \tfrac{\sigma^2}{2}\right)\Delta t + \sigma\sqrt{\Delta t}\, Z_t\right], \qquad Z_t \sim \mathcal{N}(0,1)$$
 
 ### 3.3 La boucle de couverture
 
