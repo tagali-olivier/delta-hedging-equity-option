@@ -29,8 +29,6 @@ Pour neutraliser ce risque, le trader **achète des actions**. Combien ? Exactem
 
 Le problème : **le delta change tout le temps** (avec le prix, le temps, la volatilité). Il faut donc réajuster la couverture chaque jour. C'est ce qu'on simule ici sur un mois.
 
-> **Attention au signe.** On lit parfois qu'il faut « détenir −Δ actions par call vendu ». C'est l'inverse : un **vendeur** de call se couvre en détenant **+Δ** actions, puisqu'il perd quand l'action monte. Le code gère les deux cas avec le paramètre `position` (−1 = vendeur, cas par défaut ; +1 = acheteur).
-
 ## 2. Hypothèses
 
 | Paramètre | Valeur |
