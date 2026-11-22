@@ -72,7 +72,7 @@ $$S_t = S_{t-1}\, \exp\!\left[\left(r - \tfrac{\sigma^2}{2}\right)\Delta t + \si
 Le portefeuille du trader contient trois lignes : l'option vendue, les actions de couverture, et un compte cash (prime encaissée − actions achetées, rémunéré au taux r).
 
 ```
-Jour 0 : on vend l'option, on encaisse la prime, on achète Δ₀ × 10 000 actions.
+Jour 0 : on vend l'option, on encaisse la prime, on achète Δ₀ × 10 000 actions. 
 Jour t : nouveau prix S_t
          -> on réévalue l'option (prix et Grecs)
          -> on calcule le PnL de la journée
