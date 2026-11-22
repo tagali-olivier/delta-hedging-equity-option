@@ -160,7 +160,7 @@ Toutes les sorties sont dans [`results/`](results/) (la sortie console complète
 
 - **Sans couverture**, le résultat dépend entièrement de la direction du marché : −25 000 € quand l'action monte de 5 % (trajectoire 1), +39 000 € quand elle baisse de 7 % (trajectoire 4). C'est un pari, pas du market-making.
 - **Avec couverture**, le PnL reste entre +900 € et +2 000 € quelle que soit la direction. L'efficacité de la couverture est de **99,9 %** : elle élimine 99,9 % de la variance du PnL quotidien.
-- Les cinq PnL sont positifs, et ce n'est pas un hasard : avec cette graine, les cinq trajectoires ont une **vol réalisée inférieure à 20 %**. Le trader a vendu de la volatilité à 20 % et le marché n'a bougé qu'à 13–17 %, donc le gain theta dépasse le coût gamma. Plus la vol réalisée est basse, plus le PnL est élevé (trajectoire 3 : 13 % → +1 954 €).
+- Les cinq PnL sont positifs, et ce n'est pas un hasard: avec cette graine, les cinq trajectoires ont une **vol réalisée inférieure à 20 %**. Le trader a vendu de la volatilité à 20 % et le marché n'a bougé qu'à 13–17 %, donc le gain theta dépasse le coût gamma. Plus la vol réalisée est basse, plus le PnL est élevé (trajectoire 3 : 13 % → +1 954 €).
 
 ![Attribution du PnL](figures/03_attribution_pnl.png)
 
