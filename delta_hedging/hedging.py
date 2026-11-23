@@ -1,7 +1,7 @@
 """
 Cœur du projet : la boucle de couverture delta, jour après jour.
 
-Situation : un client achète un call ATM 1 an à la banque. La banque est donc
+Situation : un client achète un call ATM 1 an à la banque. La banque est donc 
 COURTE de l'option. Si l'action monte, l'option qu'elle a vendue prend de la
 valeur et la banque perd de l'argent. Pour neutraliser ce risque, le trader
 ACHÈTE Δ actions par option vendue, et ajuste cette quantité chaque jour.
