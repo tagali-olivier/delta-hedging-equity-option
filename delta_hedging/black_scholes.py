@@ -47,7 +47,7 @@ def bs_greeks(S, K, r, T, sigma, s_floor: float = 0.01) -> Greeks:
     """
     S = np.maximum(np.asarray(S, dtype=float), s_floor)
     T = np.asarray(T, dtype=float)
-    S, T = np.broadcast_arrays(S, T)
+    S, T = np.broadcast_arrays(S, T) #mettre S et T à la même dimension
 
     expired = T <= _T_EPS
     # On remplace T par une petite valeur positive là où l'option est échue,
