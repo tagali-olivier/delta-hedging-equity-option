@@ -11,7 +11,7 @@ Projet personnel : simulation en Python d'une stratégie de **couverture delta d
 1. [Le contexte ](#1-le-contexte)
 2. [Hypothèses](#2-hypothèses)
 3. [La méthode](#3-la-méthode)
-4. [Organisation du code](#4-organisation-du-code)
+4. [Organisation du code](#4-organisation-du-code) 
 5. [Lancer le projet](#5-lancer-le-projet)
 6. [Résultats](#6-résultats)
 7. [Ce qu'il faut retenir](#7-ce-quil-faut-retenir)
