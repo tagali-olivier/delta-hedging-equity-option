@@ -2,7 +2,7 @@
 Prix et sensibilités (<< Grecs >>) d'un call européen dans le modèle de Black-Scholes.
 
 Toutes les fonctions acceptent des scalaires OU des tableaux numpy : on peut
-donc pricer en un seul appel l'option sur des centaines de trajectoires à la fois.
+donc pricer en un seul appel l'option sur des centaines de trajectoires à la fois. 
 
 Formules (sans dividende) :
     d1 = [ln(S/K) + (r + σ²/2)·T] / (σ·√T)
