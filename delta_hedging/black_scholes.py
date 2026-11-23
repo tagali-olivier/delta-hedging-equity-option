@@ -11,7 +11,7 @@ Formules (sans dividende) :
     Δ  = N(d1)
     Γ  = n(d1) / (S·σ·√T)
     ν  = S·√T·n(d1)                       (pour +1,00 de volatilité, soit +100 %)
-    Θ  = -S·n(d1)·σ / (2√T) - r·K·e^(-rT)·N(d2)     (par an)
+    Θ  = -S·n(d1)·σ / (2√T) - r·K·e^(-rT)·N(d2)     (par an) 
 où N est la fonction de répartition de la loi normale et n sa densité.
 """
 
