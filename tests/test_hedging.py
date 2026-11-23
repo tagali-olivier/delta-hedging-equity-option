@@ -7,7 +7,7 @@ import numpy as np
 import pytest
 
 from delta_hedging.analytics import hedge_effectiveness
-from delta_hedging.config import HedgeParams, MarketParams, OptionSpec, SimulationParams
+from delta_hedging.config import HedgeParams, MarketParams, OptionSpec, SimulationParams 
 from delta_hedging.scenarios import run_scenario
 
 MARKET = MarketParams()
