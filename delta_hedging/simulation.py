@@ -8,7 +8,7 @@ Pour une couverture delta, la dérive a d'ailleurs peu d'importance : c'est la
 volatilité réalisée qui fait le PnL.
 """
 
-import numpy as np
+import numpy as np 
 
 
 def simulate_stock(
