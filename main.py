@@ -1,7 +1,7 @@
 """
 Point d'entrée du projet : lance toutes les analyses et écrit les résultats.
 
-    python main.py                 # analyses complètes (≈ 1 seconde)
+    python main.py                 # analyses complètes (≈ 1 seconde) 
     python main.py --mc-paths 5000 --seed 7
 
 Sorties :
