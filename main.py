@@ -5,7 +5,7 @@ Point d'entrée du projet : lance toutes les analyses et écrit les résultats.
     python main.py --mc-paths 5000 --seed 7
 
 Sorties :
-    results/  -> tableaux CSV (journal quotidien, résumés, scénarios)
+    results/  -> tableaux CSV (journal quotidien, résumés, scénarios) 
     figures/  -> graphiques PNG utilisés dans le README
 """
 
