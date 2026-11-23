@@ -6,7 +6,7 @@ ne peuvent plus être modifiés par erreur au milieu d'une simulation.
 Pour tester un autre scénario, on crée une copie avec `dataclasses.replace`.
 """
 
-from dataclasses import dataclass
+from dataclasses import dataclass 
 
 TRADING_DAYS_PER_YEAR = 252
 
