@@ -13,7 +13,7 @@ from .simulation import simulate_stock
 
 
 def run_scenario(
-    market: MarketParams,
+    market: MarketParams, 
     option: OptionSpec,
     sim: SimulationParams,
     hedge: HedgeParams,
