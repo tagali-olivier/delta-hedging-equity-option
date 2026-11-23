@@ -4,7 +4,7 @@ si `path` est fourni, l'enregistre en PNG.
 
 Code couleur constant dans tout le projet :
     bleu   = portefeuille COUVERT
-    orange = option seule, SANS couverture
+    orange = option seule, SANS couverture 
 """
 
 from pathlib import Path
