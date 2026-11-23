@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 
 from .config import TRADING_DAYS_PER_YEAR
-from .hedging import HedgeResult
+from .hedging import HedgeResult 
 
 
 def realized_volatility(spot: np.ndarray) -> np.ndarray:
